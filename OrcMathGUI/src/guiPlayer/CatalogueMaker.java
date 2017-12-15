@@ -30,6 +30,11 @@ public class CatalogueMaker {
 		System.out.println(x.getCSVContent());
 		Scanner in = new Scanner(System.in);
 		
+		System.out.println("Type the Title for your meme.");
+		String title = in.nextLine();
+		System.out.println("Type the description for the meme named " + "'" + title + "'");
+		String description = in.nextLine();
+		System.out.println("Yeah, fuck Ajit Pai");
 	}
 	
 
