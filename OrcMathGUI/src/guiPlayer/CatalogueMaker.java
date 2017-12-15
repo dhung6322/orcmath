@@ -1,6 +1,7 @@
 package guiPlayer;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class CatalogueMaker {
 	
@@ -12,15 +13,24 @@ public class CatalogueMaker {
 	}
 	
 	public String getCSVContent() {
-		String data = "title,description\n";
+		String data = "Title , Description\n";
 		for(AjitPaiMemes t: list) {
 			data += t + "\n";
 		}
 		return data;
 	}
+	
+	public void addNewItem(String title, String description) {
+		list.add(new AjitPaiMemes(title,description));
+		System.out.println("New meme added to the database.");
+	}
 
 	public static void main(String[] args) {
+		CatalogueMaker x = new CatalogueMaker();
+		System.out.println(x.getCSVContent());
+		Scanner in = new Scanner(System.in);
 		
 	}
+	
 
 }
