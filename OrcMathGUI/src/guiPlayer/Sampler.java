@@ -119,7 +119,7 @@ public class Sampler extends GUIApplication {
 				}
 			}); 
 			viewObjects.add(cb);
-			viewObjects.add(new Star());
+			viewObjects.add(new AjitPaiMemes("", ""));
 		}
 		
 		public void mouseDragged(MouseEvent m) {
