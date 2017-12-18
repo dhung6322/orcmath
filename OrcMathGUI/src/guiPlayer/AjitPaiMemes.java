@@ -28,8 +28,8 @@ public class AjitPaiMemes extends Component {
 
 	@Override
 	public void update(Graphics2D g) {
-		g.setColor(Color.yellow);
-		g.fillRect(0, 0, getWidth(), getHeight()); 
+//		g.setColor(Color.yellow);
+//		g.fillRect(0, 0, getWidth(), getHeight()); 
 		//super.update(g);
 	}
 

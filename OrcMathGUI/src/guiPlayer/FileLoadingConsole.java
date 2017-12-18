@@ -21,33 +21,54 @@ import java.util.Scanner;
 public class FileLoadingConsole {
 
 
+	List<String> content;
+
+	public FileLoadingConsole(List<String> content) {
+		super();
+		this.content = content;
+		displayContent(content);
+
+		System.out.println(" Do you want to save the file?");
+		Scanner in = new Scanner(System.in);
+		String input = in.nextLine();
+		if((input.toLowerCase()).equals( "yes"))
+		{
+			testSaveContent("test.csv", content);
+		}
+		in.close();
+	}
+
+
 
 	public static void main(String[] args){
 
-		List<String> content = testFileLoading();
+		List<String>content = testFileLoading();
 
 		displayContent(content);
 
-		testSaveContent("test.csv");
-
-
-
-
-
-
+		System.out.println(" Do you want to save the file?");
+		Scanner in = new Scanner(System.in);
+		String input = in.nextLine();
+		if((input.toLowerCase()).equals( "yes"))
+		{
+			testSaveContent("test.csv", content);
+		}
+		in.close();
 
 	}
 
 
 
-	private static void testSaveContent(String fileName) {
+	private static void testSaveContent(String fileName, List<String> content) {
 
 		try{    
 
 			FileWriter fw=new FileWriter(fileName);    
 
-			fw.write("This file was created programmatically.");    
-
+			for(String c: content)
+			{
+				fw.write(c);
+			}
 			fw.close();    
 
 			System.out.println("Success! File \""+fileName+"\" saved!");
@@ -148,7 +169,7 @@ public class FileLoadingConsole {
 
 		//close the Scanner
 
-		in.close();
+//		in.close();
 
 		return content;
 
