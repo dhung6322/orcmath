@@ -21,11 +21,8 @@ import java.util.Scanner;
 public class FileLoadingConsole {
 
 
-	List<String> content;
-
 	public FileLoadingConsole(List<String> content) {
 		super();
-		this.content = content;
 		displayContent(content);
 
 		System.out.println(" Do you want to save the file?");

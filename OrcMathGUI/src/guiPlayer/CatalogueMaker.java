@@ -20,13 +20,13 @@ public class CatalogueMaker {
 		String data = "Title , Description\n";
 		for(AjitPaiMemes t: list) {
 			data += t + "\n";
-			content.add(t.toString());
 		}
 		return data;
 	}
 	
 	public void addNewItem(String title, String description) {
 		list.add(new AjitPaiMemes(title,description));
+		content.add(title+","+description+",");
 		System.out.println("New meme added to the database.");
 	}
 
@@ -44,6 +44,12 @@ public class CatalogueMaker {
 
 			x.addNewItem(title, description);
 			
+			System.out.println("Continue?");
+			String check = in.nextLine();
+			if( check.toLowerCase().equals("no"))
+			{
+				adding = false;
+			}
 			
 		}
 
