@@ -24,12 +24,14 @@ public class CatalogueScreen extends FullFunctionScreen {
 		priceField = new TextField(40,80,200,30,"'Price'");
 		viewObjects.add(searchField);
 		viewObjects.add(priceField);
-		add = new Button(40,120,100,100,"'Submit'",new Action() {
+		add = new Button(40,120,100,100,"'Submit'", new Action() {
 			@Override
 			public void act() {
 				System.out.println("'Submitted'");
 			}
-		});
+		}
+		);
+		viewObjects.add(add);
 	}
 
 }
